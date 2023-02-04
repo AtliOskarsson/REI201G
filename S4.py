@@ -20,11 +20,21 @@ def shellRodun(listi):
             bendill += 1
         bil = bil // 2
 
-""" listi2 = [12, 4, 34, 54, 2, 3, 5, 7, 13, 51]
-print("input array:",listi2)
-  
-shellrodun(listi2)
-print("sorted array",listi2) """
+listi1 = [8,3,2]
+listi2 = [8,5,1,9,6,2,1,7,11,3]
+listi3 = [256, 321, 286, 85, 188, 183, 409, 247, 87, 206, 33, 239]
+
+print("Fyrir:", listi1)
+shellRodun(listi1)
+print("Eftir:", listi1)
+
+print("Fyrir:", listi2)
+shellRodun(listi2)
+print("Eftir:", listi2)
+
+print("Fyrir:", listi3)
+shellRodun(listi3)
+print("Eftir:", listi3)
 #------------------------------------------------------------#
 
 #Verkefni 13
