@@ -112,7 +112,42 @@ for ord in allt:
                 serSam.append(ord)
 
 print(serSam)
+print()
 
 #------------------------------------------------------------#
 
 #Verkefni 15
+f = urlopen("https://cs.hi.is/python/einkunn.txt")
+eink_tafla = {}
+for lína in f:
+    (nr,einkunn) = lína.decode().split()
+    eink_tafla[nr] = einkunn
+
+print("------------------------------------------------------")
+print(eink_tafla)
+print(eink_tafla["9134"])
+print("------------------------------------------------------")
+
+f = urlopen("https://cs.hi.is/python/nofn.txt")
+nafn_tafla = {}
+for lína in f:
+    (nr,nafn) = lína.decode().split(maxsplit=1)
+    nafn_tafla[nr] = nafn[:-1]
+
+print(nafn_tafla)
+
+print("------------------------------------------------------")
+print ("{:<15} {:<30} {:<10}".format('Prófnúmer','Nafn','Einkunn'))
+for nr, nafn in nafn_tafla.items():
+    einkunn = eink_tafla[nr]
+    print("{:<15} {:<30} {:<10}".format(nr, nafn, einkunn))
+print("------------------------------------------------------")
+
+neinkunn = 0.0
+for nr,einkunn in eink_tafla.items():
+    if float(einkunn) > neinkunn:
+        
+        neinkunn = float(einkunn)
+        nafn = nafn_tafla[nr]
+        print(nafn, neinkunn)
+print("{} var hæst/ur með {}".format(nafn, neinkunn))
