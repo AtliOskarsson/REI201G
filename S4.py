@@ -66,6 +66,8 @@ for i in range(len(allt)):
     elif i % 10000 == 0:
         print(ord)
 
+print("------------------------------------------------------")
+
 teljari = 1
 for ord in allt:
     if spegilord(ord):
@@ -75,6 +77,8 @@ for ord in allt:
             print(ord, end=", ")
     teljari += 1
 
+print("")
+print("------------------------------------------------------")
 #Liður 3
 def margirSerhljodar(ord):
     serhljodar = ["a","á", "e", "é", "i", "í", "o", "ó", "u", "ú",
